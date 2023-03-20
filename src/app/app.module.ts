@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GeneratorPasswordComponent } from './container/generator-password/generator-password.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GeneratorPasswordComponent
   ],
   imports: [
     BrowserModule,
