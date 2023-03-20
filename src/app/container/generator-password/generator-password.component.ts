@@ -22,18 +22,25 @@ export class GeneratorPasswordComponent {
   };
 
 
-  addProperties(type:string, value:any){
+  addProperties(type:string, eve:any){
+    let value = eve.target.checked
 
-    if(type == 'numbers' && value.target.checked == true) this.numbers = value;
+    if(type == 'numbers' && value == true) this.numbers = value;
       
-    else if(type == 'symbols' && value.target.checked == true) this.symbols = value;
+    else if(type == 'symbols' && value == true) this.symbols = value;
       
-    else if(type == 'mayus' && value.target.checked == true) this.mayus = value;
-        
+    else if(type == 'mayus' && value == true) this.mayus = value;
+
+    else if(type == 'numbers' && value == false) this.numbers = value;
+
+    else if(type == 'symbols' && value == false) this.symbols = value;
+      
+    else if(type == 'mayus' && value == false) this.mayus = value;
+
     else if(type == 'input') 
-    this.length = value.target.value;
+    this.length = eve.target.value;
     this.length = Number(this.length);
-      
+    
   }
 
 
